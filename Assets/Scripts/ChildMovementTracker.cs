@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 public class ChildMovementTracker : MonoBehaviour
 {
@@ -12,27 +13,41 @@ public class ChildMovementTracker : MonoBehaviour
     [SerializeField]
     private List<Vector3Int> initialChildPositions;
 
-    [SerializeField]
-    private List<Vector3> lastChildVelocities;
+    
+    
+
+
+    public SwipeDetection sd;
+    public List<Vector3Int> finalChildPositions = new List<Vector3Int>();
+    public List<Rigidbody> childRigidbodies = new List<Rigidbody>();
 
     private void Start()
     {
         // Initialize lists to track child GameObjects, their initial positions, and velocities.
         childTransforms = new List<Transform>();
         initialChildPositions = new List<Vector3Int>();
-        lastChildVelocities = new List<Vector3>();
+        
 
         // Populate the initial lists with child GameObjects and their positions.
         foreach (Transform child in transform)
         {
             childTransforms.Add(child);
             initialChildPositions.Add(Vector3Int.RoundToInt(child.position));
-            lastChildVelocities.Add(Vector3.zero);
+            
+
+            Rigidbody rb = child.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                childRigidbodies.Add(rb);
+            }
         }
     }
 
     private void Update()
     {
+
+
+        
         // Check for destroyed child GameObjects and update moveCounter accordingly.
         for (int i = childTransforms.Count - 1; i >= 0; i--)
         {
@@ -42,19 +57,65 @@ public class ChildMovementTracker : MonoBehaviour
                 moveCounter--;
                 childTransforms.RemoveAt(i);
                 initialChildPositions.RemoveAt(i);
-                lastChildVelocities.RemoveAt(i);
+                
             }
-            else
+           
+
+            
+
+            /////////////////////////////////////////////////////////
+
+            Vector3Int currentIntPosition = Vector3Int.RoundToInt(childTransforms[i].position);
+
+            if (childRigidbodies[i] != null && childRigidbodies[i].velocity.magnitude < 0.01f)
             {
-                // Check if the child's velocity has become 0.
-                Vector3 currentVelocity = (childTransforms[i].position - initialChildPositions[i]) / Time.deltaTime;
-                if (currentVelocity == Vector3.zero && currentVelocity == lastChildVelocities[i])
-                {
-                    // Child's velocity is 0 and hasn't changed, so consider it a position change.
-                    moveCounter--;
-                }
-                lastChildVelocities[i] = currentVelocity;
+                // The child at index i has stopped moving
+                Debug.Log("Child " + i + " has reached its final destination at " + currentIntPosition);
+                // Optionally, you can remove this child from monitoring
+                // childRigidbodies[i] = null;
             }
+
+            // Update the initial position to the current position for future comparisons
+            initialChildPositions[i] = currentIntPosition;
+
+            ////////////////////////////////////////////////////////
         }
+
+        if(sd.swipeCount != sd.previousSwipeCount)
+        {
+
+
+
+
+
+            print("swiped");
+
+            sd.previousSwipeCount = sd.swipeCount;
+
+
+        }
+
+        
+
+
+
+
+
+
+        checkMoves();
+
     }
+
+    public void checkMoves()
+    {
+        
+
+
+
+    }
+
+    
 }
+
+
+

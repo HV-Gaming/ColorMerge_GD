@@ -1368,8 +1368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 963194229}
   pixelDistToDetect: 50
-  Moves: 10
-  GameOverPanel: {fileID: 2049682261}
+  swipeCount: 0
+  previousSwipeCount: 0
 --- !u!1 &1091828157
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,10 +2027,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19523db904a14f449c9b729fca80aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveCounter: 0
+  moveCounter: 10
   childTransforms: []
   initialChildPositions: []
-  lastChildVelocities: []
+  sd: {fileID: 998940668}
+  finalChildPositions: []
+  childRigidbodies: []
 --- !u!1001 &1333827707
 PrefabInstance:
   m_ObjectHideFlags: 0
