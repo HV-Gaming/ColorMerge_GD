@@ -764,13 +764,15 @@ GameObject:
   m_Component:
   - component: {fileID: 344260291}
   - component: {fileID: 344260292}
+  - component: {fileID: 344260293}
+  - component: {fileID: 344260294}
   m_Layer: 0
   m_Name: Game VCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &344260291
 Transform:
   m_ObjectHideFlags: 0
@@ -778,15 +780,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344260290}
-  m_LocalRotation: {x: 0.61825985, y: -0.0026677346, z: 0.002098503, w: 0.7859665}
-  m_LocalPosition: {x: 12.46, y: 22.44, z: -11.25}
+  m_LocalRotation: {x: 0.65806127, y: -0.0031866538, z: 0.002785054, w: 0.7529526}
+  m_LocalPosition: {x: 12.45, y: 22.09, z: -9.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1808457244}
   m_Father: {fileID: 1735626010}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 76.266, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 87.177, y: -0.701, z: 7.49}
 --- !u!114 &344260292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +827,40 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1808457244}
+--- !u!114 &344260293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344260290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0544e7b14d134a1449e61175446cfb95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 3
+  m_Tilt: -0.5
+  m_Pan: 0.29
+  m_Dutch: 0
+  m_ZoomScale: 1
+  m_FollowAttachment: 1
+  m_LookAtAttachment: 1
+--- !u!114 &344260294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344260290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Offset: {x: -0.05, y: -1.25, z: 0}
+  m_ApplyAfter: 1
+  m_PreserveComposition: 0
 --- !u!1 &415835033
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &415835034
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2154,7 +2190,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6392157, g: 0.9254902, b: 0.9490196, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.9078934, b: 0.6556604, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -6155,16 +6191,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: colorBlock
       objectReference: {fileID: 0}
-    - target: {fileID: 4979498643637959018, guid: 25a3738fae25cbb44bdef803dcd1dd4b,
-        type: 3}
-      propertyPath: m_TagString
-      value: LR
-      objectReference: {fileID: 0}
-    - target: {fileID: 4979498643637959020, guid: 25a3738fae25cbb44bdef803dcd1dd4b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0edb6fdb4a4031d4aa2456910b2392b1, type: 2}
     - target: {fileID: 4979498643637959022, guid: 25a3738fae25cbb44bdef803dcd1dd4b,
         type: 3}
       propertyPath: m_RootOrder

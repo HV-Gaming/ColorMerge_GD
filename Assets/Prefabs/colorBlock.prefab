@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 5740251474078732234}
   m_Layer: 0
   m_Name: colorBlock
-  m_TagString: Player
+  m_TagString: LR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19555a6cd449eea438d80cc3720f2cd4, type: 2}
+  - {fileID: 2100000, guid: 0edb6fdb4a4031d4aa2456910b2392b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
