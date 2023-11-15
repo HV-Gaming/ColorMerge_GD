@@ -70,7 +70,7 @@ public class ChildMovementTracker : MonoBehaviour
             if (childRigidbodies[i] != null && childRigidbodies[i].velocity.magnitude < 0.01f)
             {
                 // The child at index i has stopped moving
-                Debug.Log("Child " + i + " has reached its final destination at " + currentIntPosition);
+                //Debug.Log("Child " + i + " has reached its final destination at " + currentIntPosition);
                 // Optionally, you can remove this child from monitoring
                 // childRigidbodies[i] = null;
             }

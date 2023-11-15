@@ -25,15 +25,15 @@ public class Shredder : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "LR" || collision.gameObject.tag =="UD")
         {
-            Debug.Log("Detected Player");
+            //Debug.Log("Detected Player");
             MeshRenderer collidedRenderer = collision.collider.GetComponent<MeshRenderer>();
 
         // Check if the materials match
-        if (collidedRenderer.sharedMaterial == selfMeshRenderer.sharedMaterial)
+        if (collidedRenderer.sharedMaterial.color == selfMeshRenderer.sharedMaterial.color)
         {
-            Debug.Log("same material");
+            //Debug.Log("same material");
             ps.Play();
             // Destroy the GameObject if the materials match
             Destroy(collision.gameObject,0.05f);

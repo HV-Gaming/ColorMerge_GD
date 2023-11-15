@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: new blue jelly 1
+  m_Name: new yellow jelly
   m_Shader: {fileID: 4800000, guid: 128c5f1edaefa4c4fb3f9f7a4615edb2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -61,7 +61,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AmbientCol: 0
+    - _AmbientCol: 0.019
     - _BumpScale: 1
     - _Clipped: 0
     - _ColBright: 0
@@ -72,11 +72,11 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Lumin: 0
+    - _Lumin: 0.44
     - _MaxAtten: 0
-    - _MaxLight: 1
+    - _MaxLight: 0.655
     - _Metallic: 0
-    - _MinLight: 0.351
+    - _MinLight: 0.564
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0.02
@@ -89,9 +89,9 @@ Material:
     - _RimSmooth: 1
     - _RimTolerc: 0.623
     - _Segmented: 1
-    - _ShnIntense: 0.553
+    - _ShnIntense: 0.64
     - _ShnOverlap: 0
-    - _ShnRange: 0.052
+    - _ShnRange: 0.009
     - _ShnSmooth: 0
     - _SmoothnessTextureChannel: 0
     - _SpcIntence: 0
@@ -106,11 +106,11 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.16470587, g: 0.45485374, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.8309244, b: 0.16509432, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MaxColor: {r: 0, g: 0.8590385, b: 0.8962264, a: 1}
     - _MinColor: {r: 0.21976727, g: 0, b: 0.4056604, a: 1}
-    - _OtlColor: {r: 0.20754719, g: 0.19279526, b: 0, a: 1}
+    - _OtlColor: {r: 0.20754719, g: 0.20717776, b: 0.2026522, a: 0.6862745}
     - _RimColor: {r: 0.48124656, g: 0.43867922, b: 1, a: 1}
     - _ShnColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpcColor: {r: 1, g: 1, b: 1, a: 1}

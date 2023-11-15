@@ -5,26 +5,63 @@ using UnityEngine;
 public class BlockParent : MonoBehaviour
 {
    public int initialChildCount;
+   public int currentChildCount;
+
+   public int newChildCount;
+   
    public GameObject LevelcompleteObject;
+   public GameObject GameCam;
+
+   public SwipeDetection swipeDetection;
 
     private void Start()
     {
         initialChildCount = transform.childCount;
         LevelcompleteObject.SetActive(false);
+        currentChildCount = initialChildCount;
         // Get all child GameObjects and add them to the list
         
            
         
     }
 
-    private void Update() 
+    public void Update() 
     {
         checkCompletion();
+        
+        
+        checkchildCount();
+        
         
         
 
         
         
+    }
+
+    public void checkchildCount()
+    {
+        newChildCount = transform.childCount;
+        
+        if(newChildCount<currentChildCount)
+        {
+            
+            print("one child destroyed");
+            swipeDetection.swipeCount+=1;
+            
+            resetcheck();
+            
+        }
+
+        
+
+
+    }
+    public void resetcheck()
+    {
+        currentChildCount = newChildCount;
+        
+
     }
 
     public void checkCompletion()
@@ -33,6 +70,7 @@ public class BlockParent : MonoBehaviour
         {
             // All child objects are destroyed, print "Level Complete" in the console
             LevelcompleteObject.SetActive(true);
+            GameCam.SetActive(false);
         }
     }
 
