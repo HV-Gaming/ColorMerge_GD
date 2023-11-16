@@ -45,6 +45,24 @@ public class LoadLevels : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        
+    }
     
     
     
