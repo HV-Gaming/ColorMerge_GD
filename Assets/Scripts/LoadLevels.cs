@@ -63,6 +63,11 @@ public class LoadLevels : MonoBehaviour
         Time.timeScale = 1;
         
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
     
     
     

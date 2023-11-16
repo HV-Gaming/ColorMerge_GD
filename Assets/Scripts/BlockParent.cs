@@ -13,6 +13,7 @@ public class BlockParent : MonoBehaviour
    public GameObject GameCam;
 
    public SwipeDetection swipeDetection;
+   
 
     private void Start()
     {
@@ -47,11 +48,12 @@ public class BlockParent : MonoBehaviour
         {
             
             print("one child destroyed");
-            swipeDetection.swipeCount+=1;
+            //swipeDetection.swipeCount+=1;
             
             resetcheck();
             
         }
+        
 
         
 
@@ -71,6 +73,7 @@ public class BlockParent : MonoBehaviour
             // All child objects are destroyed, print "Level Complete" in the console
             LevelcompleteObject.SetActive(true);
             GameCam.SetActive(false);
+            Time.timeScale=0;
             GameManager.Instance.AdvanceToNextLevel();
         }
     }

@@ -16,6 +16,7 @@ public class SwipeDetection : MonoBehaviour
    private bool previousState = false;
    public int swipeCount;
    public int previousSwipeCount = 0;
+   
    //public GameObject GameOverPanel;
 
 
@@ -24,7 +25,11 @@ public class SwipeDetection : MonoBehaviour
         //GameOverPanel.SetActive(false);
     }
 
-   private void Update() {
+   private void Update() 
+   {
+
+
+    
 
     
     
