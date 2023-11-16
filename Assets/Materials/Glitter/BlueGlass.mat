@@ -7,13 +7,17 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: new yellow jelly
-  m_Shader: {fileID: 4800000, guid: 128c5f1edaefa4c4fb3f9f7a4615edb2, type: 3}
+  m_Name: BlueGlass
+  m_Shader: {fileID: 4800000, guid: 7f205347e1ebaf14c97b28211ae55dbe, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - _CLIPPED_ON
-  - _RIMOVERLAP_ON
-  - _SPCOVERLAP_ON
+  - _MK_BUMP_MAP
+  - _MK_LIGHTMODEL_BLINN_PHONG
+  - _MK_REFLECTIVE_DEFAULT
+  - _MK_RIM
+  - _MK_SPECULAR_MAP
+  - _USEREFLECTION_ON
+  - _USERIM_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -24,7 +28,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e07be47df2e750046a6eeaa358f48611, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -45,7 +49,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 188569af654ec244c93031f15a7d6f29, type: 3}
-        m_Scale: {x: 0.5, y: 0.5}
+        m_Scale: {x: 0.3, y: 0.3}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -59,59 +63,70 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ReflectMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TranslucentMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AmbientCol: 0
-    - _BumpScale: 1
-    - _Clipped: 1
-    - _ColBright: 0
-    - _ColIntense: 1
+    - _AlbedoMap: 0
+    - _BumpScale: 9.24
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DetailTint: 0.25
+    - _Distortion: 0
     - _DstBlend: 0
+    - _FresnelFactor: 1.4
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Lumin: 0.99
-    - _MaxAtten: 0
-    - _MaxLight: 0.593
+    - _LightModel: 3
+    - _MKEditorShowDetailBehavior: 0
+    - _MKEditorShowLightBehavior: 0
+    - _MKEditorShowMainBehavior: 1
+    - _MKEditorShowReflectionBehavior: 1
+    - _MKEditorShowRenderBehavior: 1
+    - _MKEditorShowRimBehavior: 1
+    - _MKEditorShowSpecularBehavior: 1
+    - _MKEditorShowTranslucentBehavior: 0
+    - _MainTint: 1.07
     - _Metallic: 0
-    - _MinLight: 0.485
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 0.39
-    - _OtlWidth: 0.12
     - _Parallax: 0.02
-    - _PostAtten: 0
-    - _RimIntense: 0.316
-    - _RimLimit: 0
-    - _RimOverlap: 1
-    - _RimSmooth: 1
-    - _RimTolerc: 0.623
-    - _Segmented: 0
-    - _ShnIntense: 0.422
-    - _ShnOverlap: 0
-    - _ShnRange: 0.009
-    - _ShnSmooth: 0.012
+    - _ReflectIntensity: 0.25
+    - _RenderMode: 0
+    - _RimIntensity: 0
+    - _RimSize: 0
+    - _ShadowIntensity: 0.1
+    - _Shininess: 0.658
     - _SmoothnessTextureChannel: 0
-    - _SpcIntence: 0
-    - _SpcLimit: 0
-    - _SpcOverlap: 1
-    - _SpcSmooth: 0
-    - _SpcTolerc: 0.05
     - _SpecularHighlights: 1
+    - _SpecularIntensity: 0.66
     - _SrcBlend: 1
-    - _Steps: 5.4
-    - _StpSmooth: 0.053
+    - _TranslucentIntensity: 0.5
+    - _TranslucentShininess: 0.275
     - _UVSec: 0
+    - _UseFastMode: 0
+    - _UseFresnel: 0
+    - _UseReflection: 1
+    - _UseRim: 1
+    - _UseTranslucent: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.8309244, b: 0.16509432, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MaxColor: {r: 0, g: 0.8590385, b: 0.8962264, a: 1}
-    - _MinColor: {r: 0.21976727, g: 0, b: 0.4056604, a: 1}
-    - _OtlColor: {r: 0.20754719, g: 0.20717776, b: 0.2026522, a: 0.6862745}
-    - _RimColor: {r: 0.48124656, g: 0.43867922, b: 1, a: 1}
-    - _ShnColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpcColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.34069067, g: 0.5440907, b: 0.8301887, a: 1}
+    - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1.6621788, g: 1.6621788, b: 1.6621788, a: 1}
+    - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 0.5}
+    - _TranslucentColor: {r: 1, g: 1, b: 1, a: 0.5}
   m_BuildTextureStacks: []

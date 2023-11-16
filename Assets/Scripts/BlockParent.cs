@@ -71,6 +71,7 @@ public class BlockParent : MonoBehaviour
             // All child objects are destroyed, print "Level Complete" in the console
             LevelcompleteObject.SetActive(true);
             GameCam.SetActive(false);
+            GameManager.Instance.AdvanceToNextLevel();
         }
     }
 
