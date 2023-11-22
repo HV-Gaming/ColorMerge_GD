@@ -8,6 +8,7 @@ public class TimerController : MonoBehaviour
     
     private float currentTime;
     public GameObject GameOverPanel;
+    public GameObject LevelCompletedPanel;
     public GameObject GamePanel;
     public GameObject TaptoBegin;
     public GameObject GameVcam;
@@ -64,6 +65,12 @@ public class TimerController : MonoBehaviour
             }
 
 
+
+        }
+
+        if(LevelCompletedPanel.activeSelf)
+        {
+            Time.timeScale =0f;
 
         }
         
