@@ -5,7 +5,7 @@ public class TimerController : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI MovesText;
-    public float totalTime = 60f; // Total time in seconds
+    
     private float currentTime;
     public GameObject GameOverPanel;
     public GameObject GamePanel;
@@ -14,6 +14,7 @@ public class TimerController : MonoBehaviour
 
     public SwipeDetection SwipeScript;
     public int movesAllowed;
+    public float totalTime = 60f; // Total time in seconds
     private int remainingMoves;
 
     void Start()
