@@ -14,27 +14,32 @@ public class LoadLevels : MonoBehaviour
    
     public void Level2()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
 
     }
     public void Level3()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
 
     }
     public void Level4()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
 
     }
     public void Level5()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(4);
 
     }
      public void Menu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void startTime()
+    {
+        Time.timeScale =1f;
     }
     public void Levelselect()
     {
