@@ -5058,6 +5058,8 @@ MonoBehaviour:
   selfMeshRenderer: {fileID: 0}
   ps: {fileID: 0}
   psr: {fileID: 0}
+  roller1: {fileID: 963216947090725789}
+  roller2: {fileID: 2537862164526039354}
 --- !u!1 &5894988125117261363
 GameObject:
   m_ObjectHideFlags: 0

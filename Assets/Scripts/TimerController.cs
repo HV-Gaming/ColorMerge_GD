@@ -31,7 +31,7 @@ public class TimerController : MonoBehaviour
     {
         remainingMoves = movesAllowed - SwipeScript.swipeCount;
 
-        if(SwipeScript.swipeCount >= movesAllowed)
+        if(SwipeScript.swipeCount >= movesAllowed+1)
         {
                 GameOverPanel.SetActive(true);
                 GamePanel.SetActive(false);

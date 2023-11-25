@@ -7,6 +7,9 @@ public class Shredder : MonoBehaviour
     public MeshRenderer selfMeshRenderer;
     public ParticleSystem ps;
     public ParticleSystemRenderer psr;
+
+    public Animator roller1;
+    public Animator roller2;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,8 @@ public class Shredder : MonoBehaviour
             ps.Play();
             // Destroy the GameObject if the materials match
             Destroy(collision.gameObject,0.05f);
+            roller1.SetTrigger("roll");
+            roller2.SetTrigger("roll");
 
         }
 
