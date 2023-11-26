@@ -71,6 +71,7 @@ public class TimerController : MonoBehaviour
         if(LevelCompletedPanel.activeSelf)
         {
             Time.timeScale =0f;
+            GameOverPanel.SetActive(false);
 
         }
         
